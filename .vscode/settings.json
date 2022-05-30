@@ -1,0 +1,12 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true,
+		"source.fixAll": true
+	},
+	"prettier.useEditorConfig": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	}
+}

@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Conteiner {
+  id           String        @id @default(uuid())
+  cnpj         String
+  numero       String
+  tipo         Int
+  categoria    String
+  status       String
+  criadoEm     DateTime      @default(now())
+  movimentacao Movimentacao?
+}
+
+model Movimentacao {
+  id             String    @id @default(uuid())
+  tipo           String
+  dataHoraInicio DateTime
+  dataHoraFim    DateTime?
+  conteinerId    String    @unique
+  Conteiner      Conteiner @relation(fields: [conteinerId], references: [id], onDelete: Cascade)
+}
