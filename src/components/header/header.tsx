@@ -39,7 +39,7 @@ const HeaderComponent: FC = () => {
 									gap: '5px',
 								}}
 							>
-								<AiFillHome /> Página Inicial
+								<AiFillHome size={20} /> Página Inicial
 							</Button>
 						</Link>
 					</li>
